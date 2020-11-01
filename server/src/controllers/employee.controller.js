@@ -27,7 +27,7 @@ employeeCtrl.getEmployee = async (req, res, next) => {
 employeeCtrl.editEmployee = async (req, res, next) => {
     const { id } = req.params
     //si no encuentra el dato, lo va a crear
-    await Employee.findByIdAndUpdate(id, { $set: req.bodygit status }, { new: true })
+    await Employee.findByIdAndUpdate(id, { $set: req.body }, { new: true })
     res.json({ status: 'Employee updated' })
 }
 
